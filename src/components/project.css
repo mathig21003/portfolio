@@ -1,0 +1,63 @@
+
+.project{
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Maximum width on larger screens */
+    padding: 20px;
+    background-color: rgb(0, 127, 238);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px white; /* Box shadow */
+    margin-top: 50px; /* Centers the component */
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+.projects{
+    display: flex;
+    justify-content: center;
+
+}
+
+.mdop {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    padding-bottom: 20px;
+}
+
+.dop {
+    height: auto; /* Changed to auto for flexibility */
+    width: 300px; /* Fixed width for larger screens */
+    border: 2px solid rgb(64, 15, 171);
+    display: flex; /* For centering content */
+    flex-direction: column; /* Aligns image and caption vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    margin-top: 20px; /* Space above each project card */
+    margin-bottom: 20px; /* Space below each project card */
+}
+
+.h3 {
+    margin: 10px 0; /* Adds margin for spacing */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .mdop {
+        flex-direction: column; /* Stacks items vertically on small screens */
+        align-items: center; /* Centers items in column layout */
+    }
+    
+    .dop {
+        margin-left: 40px;
+        width: 100%; /* Makes project cards take full width on small screens */
+        max-width: 400px; /* Sets a max width for project cards */
+    }
+
+    /* Ensure images fit well within their containers */
+    .dop img {
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Keeps aspect ratio */
+    }
+}

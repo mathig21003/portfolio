@@ -1,0 +1,93 @@
+.bg-contact {
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: auto; /* Remove fixed height for better responsiveness */
+}
+
+#contact {
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 20px;
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+#contact h2 {
+  color:black;
+}
+
+#contact p {
+  color: Black;
+}
+
+#contact label {
+  text-align: left;
+  display: flex;
+  align-items: start;
+  margin-left: 20px;
+  color:black;
+}
+
+.input {
+  margin: 20px;
+}
+
+#contact input,
+#contact textarea {
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey; /* Add a border for better visibility */
+}
+
+/* Specific styles for input and textarea */
+#contact input {
+  height: 30px;
+}
+
+#contact textarea {
+  height: 100px;
+}
+
+#contact button {
+  background-color: blue;
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  color: white; /* Ensure button text is visible */
+  border: none; /* Remove border for better aesthetics */
+  cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+#contact button:hover {
+  background-color:darkblue;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  #contact {
+      width: 100%; /* Adjust width for smaller screens */
+      margin: 0 auto; /* Centering the contact section */
+     align-items: center;
+  }
+
+  #contact input,
+  #contact textarea {
+      width: 90%; /* Make inputs and textareas full width */
+      margin: 10px 0;
+  }
+
+  #contact button {
+      width: 100%; /* Button takes full width */
+  }
+
+  .bg-contact {
+      padding: 10px; /* Add padding for better layout */
+  }
+}

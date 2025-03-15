@@ -1,0 +1,102 @@
+/* Navbar base styles */
+.navbar {
+  background-color: rgb(0, 127, 238);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+/* Menu Styles */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu ol {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu ol li {
+  margin: 0 15px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Sliding menu (for mobile) */
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; /* Set to full width */
+    background-color: rgb(0, 127, 238);
+    flex-direction: column;
+    align-items: flex-start; /* Align items to start */
+    transform: translateX(-100%); /* Hide off-screen */
+    padding-top: 50px; /* Spacing for items */
+    gap: 25px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .menu.open {
+    transform: translateX(0); /* Show when open */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  /* Hide the title when in mobile view */
+  .rig {
+    display: none;
+  }
+
+  /* Hamburger animation to X */
+  .hamburger.open .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.open .bar2 {
+    opacity: 0; /* Hide the middle bar */
+  }
+
+  .hamburger.open .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Navbar items layout for mobile */
+  ol {
+    flex-direction: column; /* Stack vertically */
+    width: 100%; /* Full width */
+    padding: 0; /* Remove padding */
+  }
+
+  ol li {
+    margin: 0; /* Remove margin */
+    width: 100%; /* Full width for each item */
+    text-align: center; /* Center text */
+  }
+}

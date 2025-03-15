@@ -1,0 +1,115 @@
+/* Profile section */
+.aboutme {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 20px;
+  }
+  
+  .image-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .text-right {
+    flex: 2;
+    padding-left: 50px;
+    text-align: left;
+  }
+  
+  .rad {
+    border-radius: 50%;
+  }
+  
+  /* About section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .text-left {
+    flex: 1;
+    padding-right: 50px;
+    text-align: left;
+  }
+  
+  .image-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box {
+    padding: 20px;
+    background-color: rgb(0, 127, 238);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+    text-align: center;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Mobile devices */
+  @media (max-width: 768px) {
+    .aboutme, .about-section {
+      flex-direction: column; /* Stack the elements vertically */
+      text-align: center;
+    }
+  
+    .text-right, .text-left {
+      padding: 0;
+    }
+  
+    .image-left, .image-right {
+      margin-bottom: 20px; /* Add spacing between the image and text */
+    }
+  
+    .rad {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .image-right img, .image-left img {
+      width: 80%; /* Make images responsive */
+      height: auto;
+    }
+  
+    .box {
+      margin: 0 auto; /* Center the box */
+      width: 90%; /* Make the box width fit within smaller screens */
+    }
+  }
+  
+  /* Smaller screens (like phones in portrait mode) */
+  @media (max-width: 480px) {
+    .aboutme, .about-section {
+      padding: 10px;
+    }
+  
+    .rad {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .image-right img, .image-left img {
+      width: 100%; /* Full width images on very small screens */
+      height: auto;
+    }
+  
+    .text-right h1, .text-left h1 {
+      font-size: 1.5rem; /* Adjust heading sizes for smaller screens */
+    }
+  
+    .text-right h2, .text-left p {
+      font-size: 1rem;
+    }
+  
+    .box {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+  

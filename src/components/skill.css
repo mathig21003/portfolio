@@ -1,0 +1,81 @@
+/* General Styles */
+.skills-section {
+    padding: 50px;
+    background-color: aquamarine;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
+}
+
+/* Skills Heading */
+.skills-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: rgb(0, 127, 238);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Skills Content */
+.skills-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Individual skill section */
+.tech, .web {
+    flex: 1;
+    min-width: 280px; /* Changed to provide better scaling */
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* Skill lists */
+.tech ul, .web ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Skill section headers */
+.tech h1, .web h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech, .web {
+        min-width: 90%; /* Ensure it takes full width on smaller screens */
+        text-align: center;
+        margin: 10px 0; /* Vertical spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-heading {
+        font-size: 2rem; /* Slightly smaller heading on small screens */
+    }
+
+    .tech h1, .web h1 {
+        font-size: 1.5rem; /* Smaller section headers */
+    }
+
+    .tech ul, .web ul {
+        font-size: 1rem; /* Smaller list items */
+    }
+}
+
